@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <script type="text/javascript">
+        alert("欢迎来到登录界面");
+    </script>
+    <style >
+        /*  这是选择器，可以给页面增加样式，属于css
+            id不能被重复使用，class可以被重复使用*/
+        #id01{
+            color:blue;
+        }
+        .class{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1 align="center">用户注册</h1>
+        <table align="center">
+            <tr id="id01">
+                <td>用户名：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="class">密码：</td>
+                <!-- 密码自动加密 value设置默认值 -->
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td class="class">确认密码：</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <!-- 圆形选择，将其分组后这个组内只能选一个 -->
+                    <input type="radio" name="sex" checked="checked"/>男
+                    <input type="radio" name="sex"/>女
+                </td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <!-- 方形选择 -->
+                <td>
+                    <input type="checkbox" checked="checked"/>Java
+                    <input type="checkbox" />C++
+                    <input type="checkbox" />Python
+                </td>
+            </tr>
+            <tr>
+                <td>国籍：</td>
+                <td>
+                    <!-- 选择，默认为第一行，select可以设定默认值 -->
+                    <select>
+                        <option>---请选择国籍---</option>
+                        <option selected="selected">中国</option>
+                        <option>美国</option>
+                        <option>英国</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>自我评价：</td>
+                <!-- 多行文本输入 -->
+                <td><textarea rows="10" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <!-- 重置按钮，一点全部变为默认值，value可以配置按钮名称，默认为重置 -->
+                <td align="center"><input type="reset"/></td>
+                <!-- 提交按钮 -->
+                <td align="center"><input type="submit" value="提交"/></td>
+            </tr>
+
+        </table>
+
+    </form>
+</body>
+</html>

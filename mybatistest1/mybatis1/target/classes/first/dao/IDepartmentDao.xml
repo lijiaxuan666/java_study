@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="first.dao.IDepartmentDao">
+    <!--定义department的resultMap-->
+    <resultMap id="departmentMap" type="first.domain.Department">
+        <id property="id" column="id"></id>
+        <result property="dep_name" column="dep_name"></result>
+        <result property="dep_locationion" column="dep_locationion"></result>
+        <!--配置department对象中emloyee集合的映射
+            出现过的问题：collection中的property值与Departemnt中定义的名称不同导致报错-->
+        <collection property="list" ofType="first.domain.Employee">
+            <id property="id" column="id"></id>
+            <result property="name" column="name"></result>
+            <result property="age" column="age"></result>
+            <result property="dep_id" column="dep_id"></result>
+        </collection>
+    </resultMap>
+
+    <select id="findAll" resultMap="departmentMap" >
+        select * from department left outer join employee on department.id = employee.dep_id;
+    </select>
+</mapper>

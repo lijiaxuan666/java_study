@@ -1,0 +1,29 @@
+#格式：key: value
+
+#字符串用单引号，双引号，不带引号都可以，但在有转义字符时，结果会不一样
+#单引号对将其识别为单纯字符串，但双引号会将转义符识别出来
+#对象  对空格要求很高，如果name和People对齐，那他就是两个东西
+people:
+  name: ljx
+  age: 19
+  birth: 2021/11/11
+  #list集合写法与数组相同
+  hobby:
+    - code
+    - music
+    - game
+  #行内写法
+  maps: {k1: v1,k2: v2}
+  dog:
+    name: 旺财
+    age: 3
+
+#数组行内写法
+#pets: {cat,dog,pig}
+
+#随机值
+num: ${random.int}
+
+#设置默认值
+#比如people里没有hello属性，那么它打印为no,若有hello属性，则打印的是hello属性值
+username: ${people.hello:no}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--base 标签设置页面相对路径工作时参照的地址
+        href 属性就是参数的地址值
+        后面的文件名可以省略，即http://localhost:8080/07_servlet/a/b/
+        但斜杠不能省略，因为有斜杠才表示是文件夹，去掉就变成了文件
+    -->
+    <base href="http://localhost:8080/springmvc_01_start/a/b/c.html">
+</head>
+<body>
+    这是 a 下的 b 下的 c.html 页面<br/>
+    <a href="../../index2.html">跳回首页</a><br/>
+    <!-- 由于请求转发，他的路径是转发的servlet的路径，所以路径使用上面相对路径就会出错
+         变成http://localhost:8080/index2.html导致找不到，所以应该使用base标签将路径固定
+         此时不管路径是什么，都会按base标签里的路径计算
+    -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function fun(){
+            alert("静态表单");
+            return false;
+        }
+
+        window.onload=function () {
+            var obj=document.getElementById("bbb");
+            obj.onsubmit=function () {
+                alert("动态表单");
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<form action="https://baidu.com" method="get" onsubmit="return fun()">
+    <input type="submit" value="静态提交">
+</form>
+<form id="bbb">
+    <input type="submit" value="动态提交">
+</form>
+</body>
+</html>

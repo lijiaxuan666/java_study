@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<!--这是thymeleaf行内写法-->
+尊敬的[[${session.loginUser.username}]]你好
+<br/>
+欢迎来到首页<br/>
+<a href="/form_layouts">完善个人资料(文件上传)</a><br/>
+<form action="">
+    请输入要查询图片的用户：<input type="text" name="username">
+    <input type="submit" value="查询">
+</form>
+</body>
+</html>

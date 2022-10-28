@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间不要写错，不然会报Invalid bound statement (not found):-->
+<mapper namespace="com.example.springboot_04_data.mapper.StudentMapper">
+    <select id="getStudent" resultType="com.example.springboot_04_data.pojo.Student">
+        select * from  stu where  id=#{id}
+    </select>
+
+    <insert id="insert">
+        insert into stu values(null,#{name},#{age},#{score},#{birthday},#{insert_time})
+    </insert>
+</mapper>

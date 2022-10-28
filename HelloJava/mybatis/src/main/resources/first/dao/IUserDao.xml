@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="first.dao.IUserDao">
+    <!--注意：在sql语句很长需要换行时，
+        需要将上一行最后一个字符后面或者下一行第一个字符前面加上空格，
+        不然在拼接时容易将两个字符串连接在一起变成一个其他的字符串-->
+    <select id="findAll22" resultType="first.domain.User">
+        select * from stu;
+    </select>
+
+    <insert id="saveUser" parameterType="first.domain.User">
+        <!--selectKey 用来获取新生成的主键，如果只是插入而不需要插入的主键值时就不需要selectKey中的内容-->
+        <selectKey keyProperty="id" keyColumn="id" resultType="INT" order="AFTER">
+            <!-- keyProperty的id是对应User中的id属性名，跟数据库主键对应，
+                 keyColumn用于设置第几列是主键，当主键不是表第一列时使用。使用联合主键时可以用逗号隔开
+                 resultType 是返回值类型，order是先做还是后做这件事-->
+            select last_insert_id();
+        </selectKey>
+        insert into stu(id,name,age,score,birthday,insert_time)values(#{id},#{name},#{age},#{score},#{birthday},#{insert_time});
+    </insert>
+
+    <update id="updateUser" parameterType="first.domain.User">
+        update stu set name=#{name},age=#{age},score=#{score},birthday=#{birthday},insert_time=#{insert_time} where id=#{id}
+    </update>
+    
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from stu where id = #{uid}
+        <!-- 这个uid是个占位符，可以写任何名字-->
+    </delete>
+
+    <select id="findById"  parameterType="INT" resultType="first.domain.User">
+        <!-- 这里parameterType="INT" 里面的INT也可以写成int、Integer、java.lang.Integer-->
+        select * from stu where id = #{uid}
+    </select>
+
+    <select id="findByName" parameterType="String" resultType="first.domain.User">
+        select * from stu where name like #{name}
+        <!-- 也可以写为select * from stu where name like '%${value}%'
+             传参时无需再使用%
+             但如果这样表示，value会与参数绑定在一起，也就是说参数只能叫value  -->
+
+        <!-- 区别
+             第一种执行的sql语句：select * from stu where name like ?
+             第二种执行的sql语句：select * from stu where name like '%李%'
+             可以发现第一种是使用了PreparedStatement的参数占位符   使用最多
+             第二种使用的是Statement对象的字符串拼接sql-->
+    </select>
+
+    <select id="findTotal" resultType="INT">
+        select count(id) from stu
+    </select>
+
+    <select id="findByVo" parameterType="first.domain.QueryVo" resultType="first.domain.User">
+        select * from stu where name like #{user.name}
+    </select>
+
+    <!--条件查询,使用if标签-->
+    <select id="findByCondition" resultType="first.domain.User" parameterType="first.domain.User">
+        select * from stu where 1 = 1
+        <!--test与#{}中的字符要与对象属性值完全一致，因为是Java语句，区分大小写
+            与Java语言不同的是与关系要写and不能写&&-->
+        <if test="name != null">
+            and name = #{name}
+        </if>
+        <!--如果还有条件，可以继续往后加-->
+    </select>
+
+    <!--条件查询,使用where标签-->
+    <select id="findByCondition2" resultType="first.domain.User" parameterType="first.domain.User">
+        select * from stu
+        <!--使用where标签可以不用写where 1=1-->
+        <where>
+            <if test="name != null">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+
+    <!--根据QueryVo中提供的id集合查询数据-->
+    <select id="findInIds" parameterType="first.domain.QueryVo" resultType="first.domain.User">
+        select * from stu
+        <where>
+            <if test="ids != null and ids.size()>0">
+                <!--collection的值是集合名,open是前面的语句,close是后面的语句,
+                    item是变量的名字,separator是分隔符
+                    就相当于select * from stu where ids !=null and ids.size()>0 and id in (id1,id2,id3...)-->
+                <foreach collection="ids" open="and id in (" close=")" item="id" separator=",">
+                    <!--此处#{}中的变量名应与item的值相同-->
+                    #{id}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+</mapper>

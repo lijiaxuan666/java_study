@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTO Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis的主配置文件-->
+<configuration>
+    <!--配置properties
+        可以在标签内部配置连接数据库的信息。也可以通过引用外部配置文件信息
+        注：若进行配置,下方environment中那么对应的value值应改为${driver}格式
+        resource属性： 常用
+            用于指定配置文件的位置，是按照类路径的写法来写，并且必须存在与类路径之下
+
+            <properties resource="jdbcConfig.properties"></property>
+
+        url属性:
+            是要求按照Url的写法来写地址
+            URL：Uniform Resource Locator 统一资源定位符，它是可以唯一标识一个资源的位置
+            它的写法：
+                http://localhost:8080/mybatisserver/demo1Servlet
+                协议      主机     端口      URI
+                URI：Uniform Resource Identifier 统一资源标识符号，它在应用中可以唯一定位一个资源
+                URL比URI更加精确，更加准确
+                文件也有文件协议file，Windows下省略了而已
+
+            <properties url="file:///D:/ljx/HelloJava/mybatis/src/main/resources/jdbcConfig.properties"></property>
+    -->
+
+    <!--
+       <typeAliases>
+            1.typeAlias 用于配置别名。它只能配置domain中类的别名
+            type属性指的是实体类全限定类名。alias属性指定别名，当指定了别名就会区分大小写
+            当修改之后，原来出现type的，都可以用别名代替
+            <typeAlias type="first.domain.User" alias="user"></typeAlias>
+
+            2.package用于指定要被指别名的包，当指定之后，改包下的实体类都会注册别名，
+            并且类名就是别名，不再区分大小写
+            <package name="first.domain.User"></package>
+
+        </typeAliases>
+    -->
+
+    <!--配置环境-->
+    <environments default="mysql">
+        <!--配置mysql环境-->
+        <environment id="mysql">
+            <!--配置事务类型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源（连接池）-->
+            <dataSource type="POOLED">
+                <!--配置连接数据库的4个基本信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/student"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--指定映射配置文件的位置，映射配置文件的是每个dap独立的配置文件
+        如果用注解配置的话，此处应该使用class属性指定被注解的dao全限定类名
+    -->
+    <mappers>
+        <!--mappers里面的package标签是用于指定dao接口所在的包，当指定之后就不需要再写mapper或resource或class了-->
+        <mapper class="first.dao.IUserDao"/>
+    </mappers>
+</configuration>

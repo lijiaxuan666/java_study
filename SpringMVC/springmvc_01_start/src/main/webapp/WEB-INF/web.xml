@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- 用户可见的页面放在webapp下面，不可见的放在WEB-INF下面 -->
+
+  <!-- servlet标签给Tomcat配置Servlet小程序 -->
+  <servlet>
+    <!-- servlet-name标签给Servlet程序起一个别名（一般是类名） -->
+    <servlet-name>HelloServlet</servlet-name>
+    <!-- servlet-class标签是Servlet程序的全限定类名 -->
+    <servlet-class>test.day1.HelloServlet</servlet-class>
+
+    <!--init-param 是初始化参数-->
+    <init-param>
+      <!--是参数名-->
+      <param-name>name</param-name>
+      <!--是参数值-->
+      <param-value>root</param-value>
+    </init-param>
+
+  </servlet>
+
+  <!-- servlet-mapping标签是给Servlet程序配置访问地址 -->
+  <servlet-mapping>
+    <!-- servlet-name标签是告诉服务器，我们当前配置的地址给哪个Servlet程序使用 -->
+    <servlet-name>HelloServlet</servlet-name>
+    <!-- url-pattern 标签配置访问地址
+         /在服务器解析的时候，表示地址为 http://ip:port/工程路径
+         /hello 表示的地址为http://ip:port/工程路径/hello
+         /表示所有的请求都会经过这个Servlet
+
+         通俗的说http://ip:port/工程路径/字符串
+         如果url-pattern标签里写/，这里字符串写任何值都可以访问该Servlet
+         但如果写/hello这种固定好的字符串，这样字符串与其相同才可以访问，不然就404
+         -->
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Servlet01</servlet-name>
+    <servlet-class>test.day1.Servlet01</servlet-class>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:mysql://localhost:3306/student</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet01</servlet-name>
+    <url-pattern>/hello2</url-pattern>
+  </servlet-mapping>
+
+  <!-- context-param是上下文参数（它属于整个web工程）-->
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>context</param-value>
+  </context-param>
+
+  <!--  day2   -->
+  <servlet>
+    <servlet-name>RequestAPIServlet</servlet-name>
+    <servlet-class>test.day2.RequestAPIServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestAPIServlet</servlet-name>
+    <url-pattern>/requestAPIServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ParameterServlet</servlet-name>
+    <servlet-class>test.day2.ParameterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ParameterServlet</servlet-name>
+    <url-pattern>/parameterServlet</url-pattern>
+  </servlet-mapping>
+
+  <!--  day3   -->
+  <servlet>
+    <servlet-name>Servlet1</servlet-name>
+    <servlet-class>test.day3.Servlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Servlet2</servlet-name>
+    <servlet-class>test.day3.Servlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet2</servlet-name>
+    <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ForwordC</servlet-name>
+    <servlet-class>test.day3.ForwordC</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForwordC</servlet-name>
+    <url-pattern>/forwordC</url-pattern>
+  </servlet-mapping>
+
+  <!-- day4 -->
+  <servlet>
+    <servlet-name>ResponseIOServlet</servlet-name>
+    <servlet-class>test.day4.ResponseIOServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResponseIOServlet</servlet-name>
+    <url-pattern>/responseIOServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Response1</servlet-name>
+    <servlet-class>test.day4.Response1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Response1</servlet-name>
+    <url-pattern>/response1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Response2</servlet-name>
+    <servlet-class>test.day4.Response2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Response2</servlet-name>
+    <url-pattern>/response2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Upload</servlet-name>
+    <servlet-class>test.day5.Upload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Upload</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>test.day5.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

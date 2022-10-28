@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "people",
+      "type": "com.example.springboot_01_start.pojo.People",
+      "sourceType": "com.example.springboot_01_start.pojo.People"
+    }
+  ],
+  "properties": [
+    {
+      "name": "people.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.springboot_01_start.pojo.People"
+    },
+    {
+      "name": "people.birth",
+      "type": "java.util.Date",
+      "sourceType": "com.example.springboot_01_start.pojo.People"
+    },
+    {
+      "name": "people.hobby",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "com.example.springboot_01_start.pojo.People"
+    },
+    {
+      "name": "people.maps",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.example.springboot_01_start.pojo.People"
+    },
+    {
+      "name": "people.name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.springboot_01_start.pojo.People"
+    }
+  ],
+  "hints": []
+}

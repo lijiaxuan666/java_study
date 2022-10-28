@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/firstproject?zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  servlet:
+    multipart:
+      #上传单个文件最大大小
+      max-file-size: 10MB
+      #上传多文件加起来最大大小
+      max-request-size: 100MB

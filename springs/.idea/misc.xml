@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring1/pom.xml" />
+        <option value="$PROJECT_DIR$/springfactory/pom.xml" />
+        <option value="$PROJECT_DIR$/springbean/pom.xml" />
+        <option value="$PROJECT_DIR$/springDI/pom.xml" />
+        <option value="$PROJECT_DIR$/day2_spring/pom.xml" />
+        <option value="$PROJECT_DIR$/day2_xmlioc/pom.xml" />
+        <option value="$PROJECT_DIR$/day2_annioc/pom.xml" />
+        <option value="$PROJECT_DIR$/day2_annoic_withoutxml/pom.xml" />
+        <option value="$PROJECT_DIR$/day3_account/pom.xml" />
+        <option value="$PROJECT_DIR$/day3_proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/day3_springAOP/pom.xml" />
+        <option value="$PROJECT_DIR$/day3/day3_advicetype/pom.xml" />
+        <option value="$PROJECT_DIR$/day3_advicetype1/pom.xml" />
+        <option value="$PROJECT_DIR$/day3_annotationAop/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

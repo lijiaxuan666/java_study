@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JdbcTemplate.iml" filepath="$PROJECT_DIR$/JdbcTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account_aoptx_anno/account_aoptx_anno.iml" filepath="$PROJECT_DIR$/account_aoptx_anno/account_aoptx_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account_aoptx_xml/account_aoptx_xml.iml" filepath="$PROJECT_DIR$/account_aoptx_xml/account_aoptx_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account_tx_anno/account_tx_anno.iml" filepath="$PROJECT_DIR$/account_tx_anno/account_tx_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account_tx_withoutxml/account_tx_withoutxml.iml" filepath="$PROJECT_DIR$/account_tx_withoutxml/account_tx_withoutxml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/account_tx_xml/account_tx_xml.iml" filepath="$PROJECT_DIR$/account_tx_xml/account_tx_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbctemplate/jdbctemplate.iml" filepath="$PROJECT_DIR$/jdbctemplate/jdbctemplate.iml" />
+    </modules>
+  </component>
+</project>

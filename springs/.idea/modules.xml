@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day2_annioc/day2_annioc.iml" filepath="$PROJECT_DIR$/day2_annioc/day2_annioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day2_annoic_withoutxml/day2_annoic_withoutxml.iml" filepath="$PROJECT_DIR$/day2_annoic_withoutxml/day2_annoic_withoutxml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day2_spring/day2_spring.iml" filepath="$PROJECT_DIR$/day2_spring/day2_spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day2_xmlioc/day2_xmlioc.iml" filepath="$PROJECT_DIR$/day2_xmlioc/day2_xmlioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3_account/day3_account.iml" filepath="$PROJECT_DIR$/day3_account/day3_account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3/day3_advicetype/day3_advicetype.iml" filepath="$PROJECT_DIR$/day3/day3_advicetype/day3_advicetype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3_advicetype1/day3_advicetype1.iml" filepath="$PROJECT_DIR$/day3_advicetype1/day3_advicetype1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3_annotationAop/day3_annotationAop.iml" filepath="$PROJECT_DIR$/day3_annotationAop/day3_annotationAop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3_proxy/day3_proxy.iml" filepath="$PROJECT_DIR$/day3_proxy/day3_proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day3_springAOP/day3_springAOP.iml" filepath="$PROJECT_DIR$/day3_springAOP/day3_springAOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring1/spring1.iml" filepath="$PROJECT_DIR$/spring1/spring1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springDI/springDI.iml" filepath="$PROJECT_DIR$/springDI/springDI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbean/springbean.iml" filepath="$PROJECT_DIR$/springbean/springbean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springs.iml" filepath="$PROJECT_DIR$/springs.iml" />
+    </modules>
+  </component>
+</project>

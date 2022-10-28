@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--需要添加模板引擎的约束-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--所有的html元素都可以被thymeleaf替换接管th:元素名-->
+<h1 th:text="${msg}"></h1>
+
+<h2 th:each="user:${users}" th:text="${user}"></h2>
+<br/>
+<h2 th:each="user:${users}">[[${user}]]</h2>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="day3_proxy" />
+        <module name="day2_annoic_withoutxml" />
+        <module name="day3_advicetype1" />
+        <module name="day3_annotationAop" />
+        <module name="spring1" />
+        <module name="day2_xmlioc" />
+        <module name="springbean" />
+        <module name="day3_account" />
+        <module name="day3_springAOP" />
+        <module name="day2_annioc" />
+        <module name="springDI" />
+        <module name="day3_advicetype" />
+        <module name="day2_spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="day2_annioc" target="1.8" />
+      <module name="day2_annoic_withoutxml" target="1.8" />
+      <module name="day2_spring" target="1.8" />
+      <module name="day2_xmlioc" target="1.8" />
+      <module name="day3_account" target="1.8" />
+      <module name="day3_advicetype" target="1.8" />
+      <module name="day3_advicetype1" target="1.8" />
+      <module name="day3_annotationAop" target="1.8" />
+      <module name="day3_proxy" target="1.8" />
+      <module name="day3_springAOP" target="1.8" />
+      <module name="spring1" target="1.8" />
+      <module name="springbean" target="1.8" />
+      <module name="springDI" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
